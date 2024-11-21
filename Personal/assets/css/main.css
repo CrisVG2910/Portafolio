@@ -747,11 +747,13 @@ section,
   background-color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 868px) {
+  .hero img {
+    display: none;
+  }
   .hero h2 {
     font-size: 32px;
   }
-
   .hero p {
     font-size: 20px;
   }
@@ -786,6 +788,7 @@ section,
   color: var(--accent-color);
   line-height: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -1036,6 +1039,7 @@ section,
 
 .resume .resume-item ul li {
   padding-bottom: 10px;
+  list-style: none;
 }
 
 .resume .resume-item:last-child {
@@ -1052,6 +1056,7 @@ section,
   top: 0;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
+  list-style: none;
 }
 
 /*--------------------------------------------------------------
@@ -1102,6 +1107,7 @@ section,
   font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 22px;
+  margin-top: 80px;
 }
 
 .services .service-item p {
@@ -1130,6 +1136,27 @@ section,
 .services .service-item:hover h3,
 .services .service-item:hover p {
   color: var(--contrast-color);
+}
+
+.service-item .project {
+  margin: 0 auto; /* Centra el contenido */
+  overflow: hidden; /* Oculta el contenido que se salga del contenedor */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+  max-height: 200px; /* Ajusta el tamaño máximo según tus necesidades */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-item .project img {
+  width: 100%; /* Ajusta el ancho del GIF al contenedor */
+  height: auto; /* Mantiene la proporción del GIF */
+  object-fit: cover; /* Asegura que el GIF se ajuste al espacio */
+  transition: transform 0.3s ease; /* Agrega un efecto de hover */
+}
+
+.service-item:hover .project img {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
 }
 
 /*--------------------------------------------------------------
